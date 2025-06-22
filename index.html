@@ -89,19 +89,6 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
-                    <!--
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link ">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-                    -->
-
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -129,65 +116,6 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-<div class="marquee-wrapper">
-	<div class="container">
-    <!--
-		<div class="marquee-block">
-			<div class="marquee-inner to-left">
-				<span>
-					<div class="marquee-item">
-            <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-						<p class="text-white">1</p>
-					</div>
-					<div class="marquee-item">
-            <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-						<p class="text-white">2</p>
-					</div>
-					<div class="marquee-item">
-            <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-						<p class="text-white">3</p>
-					</div>
-					<div class="marquee-item">
-            <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-						<p class="text-white">4</p>
-					</div>
-					<div class="marquee-item">
-            <img src="static/images/carousel5.jpg" alt="MY ALT TEXT"/>
-						<p class="text-white">5</p>
-					</div>
-				</span>
-				<span>
-					<div class="marquee-item">
-            <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-						<p class="text-white">1</p>
-					</div>
-					<div class="marquee-item">
-            <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-						<p class="text-white">2</p>
-					</div>
-					<div class="marquee-item">
-            <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-						<p class="text-white">3</p>
-					</div>
-					<div class="marquee-item">
-            <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-						<p class="text-white">4</p>
-					</div>
-					<div class="marquee-item">
-            <img src="static/images/carousel5.jpg" alt="MY ALT TEXT"/>
-						<p class="text-white">5</p>
-					</div>
-				</span>
-			</div>
-		</div>
-   -->
-
   </div>
 </section>
 
@@ -297,301 +225,306 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
 <!-- End Method Overview -->
 
 <!-- Comparisons to Prior Works -->
-<!-- Multi-event Baseline -->
 <section class="section">
   <div class="container is-max-desktop">
+    <h1 class="title is-3 has-text-centered mb-6">Comparisons to Prior Work</h1>
+    <!-- Multi-event Baseline -->
+    <section class="section">
+      <div class="container is-max-desktop">
 
-    <!-- Story description -->
-    <div class="content has-text-justified mb-5">
-      <h2 class="title is-4">Comparison with Muti-Event Video Generation</h2>
-      <p>
-        A robot stands on the edge of a tall city rooftop, ready to jump down to the street below. The robotfirst extends its arms, then jumps upward. As the robot drops, the building walls and city skyline move past in the background. The robot lands freely on the pavement, with its arms touching the ground, as dust and debris scatter slightly upon landing.
-      </p>
-    </div>
-
-    <!-- Videos in a row -->
-    <div class="columns is-multiline is-centered">
-
-      <div class="column is-one-third has-text-centered">
-        <video controls autoplay muted loop style="width: 100%; height: auto;">
-          <source src="static/videos/baseline/multi-event/mevg_4s.mp4" type="video/mp4">
-        </video>
-        <p class="mt-2"><strong>MEVG (ECCV 24)</strong></p>
-      </div>
-
-      <div class="column is-one-third has-text-centered">
-        <video controls autoplay muted loop style="width: 100%; height: auto;">
-          <source src="static/videos/baseline/multi-event/vlogger_4s.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p class="mt-2"><strong>Vlogger (CVPR 24)</strong></p>
-      </div>
-
-      <div class="column is-one-third has-text-centered">
-        <video controls autoplay muted loop style="width: 100%; height: auto;">
-          <source src="static/videos/baseline/multi-event/ours_4s.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p class="mt-2"><strong>Ours</strong></p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- Comparison with Style Baselines -->
-<style>
-  .comparison-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
-  }
-  .comparison-label {
-    width: 150px;
-    font-weight: bold;
-    flex-shrink: 0;
-  }
-  .comparison-images img {
-    width: 180px;
-    height: auto;
-    margin-right: 1rem;
-  }
-</style>
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <!-- Title -->
-    <h2 class="title is-4 has-text-centered">Comparison with Style Baselines</h2>
-
-    <!-- Reference Row -->
-    <div class="comparison-row">
-      <div class="comparison-label">Reference</div>
-      <div class="comparison-images">
-        <img src="static/images/style_baseline/ref/robot_resize.jpg" alt="Reference 1"
-            style="border: 2px dashed lightgray; padding: 4px;">
-        <img src="static/images/style_baseline/ref/man_resize.jpg" alt="Reference 2"
-            style="border: 2px dashed lightgray; padding: 4px;">
-        <img src="static/images/style_baseline/ref/green_boy_resize.jpg" alt="Reference 3"
-            style="border: 2px dashed lightgray; padding: 4px;">
-        <img src="static/images/style_baseline/ref/wolf_resize.jpg" alt="Reference 4"
-            style="border: 2px dashed lightgray; padding: 4px;">
-      </div>
-    </div>
-
-    <!-- BLoRA Row -->
-    <div class="comparison-row">
-      <div class="comparison-label">BLoRA</div>
-      <div class="comparison-images">
-        <img src="static/images/style_baseline/robot/blora.jpg" alt="BLoRA 1">
-        <img src="static/images/style_baseline/man/blora.jpg" alt="BLoRA 2">
-        <img src="static/images/style_baseline/green_boy/blora.jpg" alt="BLoRA 3">
-        <img src="static/images/style_baseline/wolf/blora.jpg" alt="BLoRA 4">
-      </div>
-    </div>
-
-    <!-- InstantStyle Row -->
-    <div class="comparison-row">
-      <div class="comparison-label">InstantStyle</div>
-      <div class="comparison-images">
-        <img src="static/images/style_baseline/robot/is.png" alt="InstantStyle 1">
-        <img src="static/images/style_baseline/man/is.png" alt="InstantStyle 2">
-        <img src="static/images/style_baseline/green_boy/is.png" alt="InstantStyle 3">
-        <img src="static/images/style_baseline/wolf/is.png" alt="InstantStyle 3">
-      </div>
-    </div>
-
-    <!-- DreamBooth Row -->
-    <div class="comparison-row">
-      <div class="comparison-label">DreamBooth</div>
-      <div class="comparison-images">
-        <img src="static/images/style_baseline/robot/db.png" alt="DreamBooth 1">
-        <img src="static/images/style_baseline/man/db.png" alt="DreamBooth 2">
-        <img src="static/images/style_baseline/green_boy/db.png" alt="DreamBooth 3">
-        <img src="static/images/style_baseline/wolf/db.png" alt="DreamBooth 4">
-      </div>
-    </div>
-
-    <!-- Ours Row -->
-    <div class="comparison-row">
-      <div class="comparison-label">Ours</div>
-      <div class="comparison-images">
-        <img src="static/images/style_baseline/robot/ours.png" alt="Ours 1">
-        <img src="static/images/style_baseline/man/ours.png" alt="Ours 2">
-        <img src="static/images/style_baseline/green_boy/ours.png" alt="Ours 3">
-        <img src="static/images/style_baseline/wolf/ours.png" alt="Ours 4">
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- Motion Baseline -->
-<style>
-  .video-comparison-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
-  }
-
-  .video-comparison-label {
-    width: 150px;
-    font-weight: bold;
-    flex-shrink: 0;
-  }
-
-  .video-comparison-block {
-    display: flex;
-    gap: 1rem; 
-  }
-
-  .video-comparison-block video {
-    width: 180px;
-    height: auto;
-    border: 2px solid rgb(111, 111, 111);
-    display: block;
-  }
-
-  .video-overlay-wrapper {
-    position: relative;
-    width: 180px;
-  }
-
-  .video-overlay-wrapper video.main-video {
-    width: 100%;
-    height: auto;
-    display: block;
-    border: 2px solid black;
-  }
-
-  .video-overlay-wrapper video.overlay-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60px;
-    height: auto;
-    border: 2px solid black;
-    z-index: 10;
-    pointer-events: none;
-    box-shadow: 0 0 0px rgba(0, 0, 0, 0.5);
-  }
-</style>
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <!-- Title -->
-    <h2 class="title is-4 has-text-centered">Comparison with Motion Baselines</h2>
-
-    <!-- Motion Sequences -->
-    <div class="video-comparison-row">
-      <div class="video-comparison-label">Motion Sequences</div>
-      <div class="video-comparison-block">
-        <video src="static/videos/baseline/motion/train/green_boy_flair_resized_fps16_4s.mp4" autoplay muted loop></video>
-        <video src="static/videos/baseline/motion/train/girl_yawn_resized_fps16_4s.mp4" autoplay muted loop></video>
-        <video src="static/videos/baseline/motion/train/man_run_fps16_4s.mp4" autoplay muted loop></video>
-        <video src="static/videos/baseline/motion/train/purple_robot_walk_resized_fps16_4s.mp4" autoplay muted loop></video>
-      </div>
-    </div>
-
-    <!-- Animate-X -->
-    <div class="video-comparison-row">
-      <div class="video-comparison-label">Animate-X</div>
-      <div class="video-comparison-block">
-        <div class="video-overlay-wrapper">
-          <video class="main-video" src="static/videos/baseline/motion/animate-x/green_boy_flair_green_boy_flair_resized_seed_14_rank_01_00_02_768x512_results_1col_resized_fps16_4s.mp4" autoplay muted loop></video>
-          <video class="overlay-video" src="static/videos/baseline/motion/animate-x/condition/green_boy_flair_4s.mp4" autoplay muted loop></video>
+        <!-- Story description -->
+        <div class="content has-text-justified mb-5">
+          <h2 class="title is-4">Comparison with Muti-Event Video Generation</h2>
+          <p>
+            A robot stands on the edge of a tall city rooftop, ready to jump down to the street below. The robotfirst extends its arms, then jumps upward. As the robot drops, the building walls and city skyline move past in the background. The robot lands freely on the pavement, with its arms touching the ground, as dust and debris scatter slightly upon landing.
+          </p>
         </div>
-        <div class="video-overlay-wrapper">
-          <video class="main-video" src="static/videos/baseline/motion/animate-x/girl_yawn_girl_yawn_resized_seed_14_rank_01_00_00_768x512_results_1col_resized_fps16_4s.mp4" autoplay muted loop></video>
-          <video class="overlay-video" src="static/videos/baseline/motion/animate-x/condition/girl_yawn_4s.mp4" autoplay muted loop></video>
-        </div>
-        <div class="video-overlay-wrapper">
-          <video class="main-video" src="static/videos/baseline/motion/animate-x/man_run_man_run_resized_seed_14_rank_01_00_00_768x512_results_1col_resized_fps16_4s.mp4" autoplay muted loop></video>
-          <video class="overlay-video" src="static/videos/baseline/motion/animate-x/condition/man_run_4s.mp4" autoplay muted loop></video>
-        </div>
-        <div class="video-overlay-wrapper">
-          <video class="main-video" src="static/videos/baseline/motion/animate-x/purple_robot_walk_purple_robot_walk_resized_seed_14_rank_01_00_03_768x512_results_1col_resized_fps16_4s.mp4" autoplay muted loop></video>
-          <video class="overlay-video" src="static/videos/baseline/motion/animate-x/condition/robot_walk_4s.mp4" autoplay muted loop></video>
+
+        <!-- Videos in a row -->
+        <div class="columns is-multiline is-centered">
+
+          <div class="column is-one-third has-text-centered">
+            <video controls autoplay muted loop style="width: 100%; height: auto;">
+              <source src="static/videos/baseline/multi-event/mevg_4s.mp4" type="video/mp4">
+            </video>
+            <p class="mt-2"><strong>MEVG (ECCV 24)</strong></p>
+          </div>
+
+          <div class="column is-one-third has-text-centered">
+            <video controls autoplay muted loop style="width: 100%; height: auto;">
+              <source src="static/videos/baseline/multi-event/vlogger_4s.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="mt-2"><strong>Vlogger (CVPR 24)</strong></p>
+          </div>
+
+          <div class="column is-one-third has-text-centered">
+            <video controls autoplay muted loop style="width: 100%; height: auto;">
+              <source src="static/videos/baseline/multi-event/ours_4s.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="mt-2"><strong>Ours</strong></p>
+          </div>
+
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Wan2.1-Depth -->
-    <div class="video-comparison-row">
-      <div class="video-comparison-label">Wan2.1-Depth</div>
-      <div class="video-comparison-block">
-        <div class="video-overlay-wrapper">
-          <video class="main-video" src="static/videos/baseline/motion/depth/green_boy_flair_resized_fps16_4s.mp4" autoplay muted loop></video>
-          <video class="overlay-video" src="static/videos/baseline/motion/depth/condition/green_boy_flair_4s.mp4" autoplay muted loop></video>
+
+    <!-- Comparison with Style Baselines -->
+    <style>
+      .comparison-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+      }
+      .comparison-label {
+        width: 150px;
+        font-weight: bold;
+        flex-shrink: 0;
+      }
+      .comparison-images img {
+        width: 180px;
+        height: auto;
+        margin-right: 1rem;
+      }
+    </style>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+
+        <!-- Title -->
+        <h2 class="title is-4 has-text-centered">Comparison with Style Baselines</h2>
+
+        <!-- Reference Row -->
+        <div class="comparison-row">
+          <div class="comparison-label">Reference</div>
+          <div class="comparison-images">
+            <img src="static/images/style_baseline/ref/robot_resize.jpg" alt="Reference 1"
+                style="border: 2px dashed lightgray; padding: 4px;">
+            <img src="static/images/style_baseline/ref/man_resize.jpg" alt="Reference 2"
+                style="border: 2px dashed lightgray; padding: 4px;">
+            <img src="static/images/style_baseline/ref/green_boy_resize.jpg" alt="Reference 3"
+                style="border: 2px dashed lightgray; padding: 4px;">
+            <img src="static/images/style_baseline/ref/wolf_resize.jpg" alt="Reference 4"
+                style="border: 2px dashed lightgray; padding: 4px;">
+          </div>
         </div>
-        <div class="video-overlay-wrapper">
-          <video class="main-video" src="static/videos/baseline/motion/depth/girl_yawn_resized_fps16_4s.mp4" autoplay muted loop></video>
-          <video class="overlay-video" src="static/videos/baseline/motion/depth/condition/girl_yawn_4s.mp4" autoplay muted loop></video>
+
+        <!-- BLoRA Row -->
+        <div class="comparison-row">
+          <div class="comparison-label">BLoRA</div>
+          <div class="comparison-images">
+            <img src="static/images/style_baseline/robot/blora.jpg" alt="BLoRA 1">
+            <img src="static/images/style_baseline/man/blora.jpg" alt="BLoRA 2">
+            <img src="static/images/style_baseline/green_boy/blora.jpg" alt="BLoRA 3">
+            <img src="static/images/style_baseline/wolf/blora.jpg" alt="BLoRA 4">
+          </div>
         </div>
-        <div class="video-overlay-wrapper">
-          <video class="main-video" src="static/videos/baseline/motion/depth/man_run_resized_fps16_4s.mp4" autoplay muted loop></video>
-          <video class="overlay-video" src="static/videos/baseline/motion/depth/condition/man_run_4s.mp4" autoplay muted loop></video>
+
+        <!-- InstantStyle Row -->
+        <div class="comparison-row">
+          <div class="comparison-label">InstantStyle</div>
+          <div class="comparison-images">
+            <img src="static/images/style_baseline/robot/is.png" alt="InstantStyle 1">
+            <img src="static/images/style_baseline/man/is.png" alt="InstantStyle 2">
+            <img src="static/images/style_baseline/green_boy/is.png" alt="InstantStyle 3">
+            <img src="static/images/style_baseline/wolf/is.png" alt="InstantStyle 3">
+          </div>
         </div>
-        <div class="video-overlay-wrapper">
-          <video class="main-video" src="static/videos/baseline/motion/depth/purple_robot_walk_resized_fps16_4s.mp4" autoplay muted loop></video>
-          <video class="overlay-video" src="static/videos/baseline/motion/depth/condition/robot_walk_4s.mp4" autoplay muted loop></video>
+
+        <!-- DreamBooth Row -->
+        <div class="comparison-row">
+          <div class="comparison-label">DreamBooth</div>
+          <div class="comparison-images">
+            <img src="static/images/style_baseline/robot/db.png" alt="DreamBooth 1">
+            <img src="static/images/style_baseline/man/db.png" alt="DreamBooth 2">
+            <img src="static/images/style_baseline/green_boy/db.png" alt="DreamBooth 3">
+            <img src="static/images/style_baseline/wolf/db.png" alt="DreamBooth 4">
+          </div>
+        </div>
+
+        <!-- Ours Row -->
+        <div class="comparison-row">
+          <div class="comparison-label">Ours</div>
+          <div class="comparison-images">
+            <img src="static/images/style_baseline/robot/ours.png" alt="Ours 1">
+            <img src="static/images/style_baseline/man/ours.png" alt="Ours 2">
+            <img src="static/images/style_baseline/green_boy/ours.png" alt="Ours 3">
+            <img src="static/images/style_baseline/wolf/ours.png" alt="Ours 4">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Motion Baseline -->
+    <style>
+      .video-comparison-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .video-comparison-label {
+        width: 150px;
+        font-weight: bold;
+        flex-shrink: 0;
+      }
+
+      .video-comparison-block {
+        display: flex;
+        gap: 1rem; 
+      }
+
+      .video-comparison-block video {
+        width: 180px;
+        height: auto;
+        border: 2px solid rgb(111, 111, 111);
+        display: block;
+      }
+
+      .video-overlay-wrapper {
+        position: relative;
+        width: 180px;
+      }
+
+      .video-overlay-wrapper video.main-video {
+        width: 100%;
+        height: auto;
+        display: block;
+        border: 2px solid black;
+      }
+
+      .video-overlay-wrapper video.overlay-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: auto;
+        border: 2px solid black;
+        z-index: 10;
+        pointer-events: none;
+        box-shadow: 0 0 0px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+
+        <!-- Title -->
+        <h2 class="title is-4 has-text-centered">Comparison with Motion Baselines</h2>
+
+        <!-- Motion Sequences -->
+        <div class="video-comparison-row">
+          <div class="video-comparison-label">Motion Sequences</div>
+          <div class="video-comparison-block">
+            <video src="static/videos/baseline/motion/train/green_boy_flair_resized_fps16_4s.mp4" autoplay muted loop></video>
+            <video src="static/videos/baseline/motion/train/girl_yawn_resized_fps16_4s.mp4" autoplay muted loop></video>
+            <video src="static/videos/baseline/motion/train/man_run_fps16_4s.mp4" autoplay muted loop></video>
+            <video src="static/videos/baseline/motion/train/purple_robot_walk_resized_fps16_4s.mp4" autoplay muted loop></video>
+          </div>
+        </div>
+
+        <!-- Animate-X -->
+        <div class="video-comparison-row">
+          <div class="video-comparison-label">Animate-X</div>
+          <div class="video-comparison-block">
+            <div class="video-overlay-wrapper">
+              <video class="main-video" src="static/videos/baseline/motion/animate-x/green_boy_flair_green_boy_flair_resized_seed_14_rank_01_00_02_768x512_results_1col_resized_fps16_4s.mp4" autoplay muted loop></video>
+              <video class="overlay-video" src="static/videos/baseline/motion/animate-x/condition/green_boy_flair_4s.mp4" autoplay muted loop></video>
+            </div>
+            <div class="video-overlay-wrapper">
+              <video class="main-video" src="static/videos/baseline/motion/animate-x/girl_yawn_girl_yawn_resized_seed_14_rank_01_00_00_768x512_results_1col_resized_fps16_4s.mp4" autoplay muted loop></video>
+              <video class="overlay-video" src="static/videos/baseline/motion/animate-x/condition/girl_yawn_4s.mp4" autoplay muted loop></video>
+            </div>
+            <div class="video-overlay-wrapper">
+              <video class="main-video" src="static/videos/baseline/motion/animate-x/man_run_man_run_resized_seed_14_rank_01_00_00_768x512_results_1col_resized_fps16_4s.mp4" autoplay muted loop></video>
+              <video class="overlay-video" src="static/videos/baseline/motion/animate-x/condition/man_run_4s.mp4" autoplay muted loop></video>
+            </div>
+            <div class="video-overlay-wrapper">
+              <video class="main-video" src="static/videos/baseline/motion/animate-x/purple_robot_walk_purple_robot_walk_resized_seed_14_rank_01_00_03_768x512_results_1col_resized_fps16_4s.mp4" autoplay muted loop></video>
+              <video class="overlay-video" src="static/videos/baseline/motion/animate-x/condition/robot_walk_4s.mp4" autoplay muted loop></video>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wan2.1-Depth -->
+        <div class="video-comparison-row">
+          <div class="video-comparison-label">Wan2.1-Depth</div>
+          <div class="video-comparison-block">
+            <div class="video-overlay-wrapper">
+              <video class="main-video" src="static/videos/baseline/motion/depth/green_boy_flair_resized_fps16_4s.mp4" autoplay muted loop></video>
+              <video class="overlay-video" src="static/videos/baseline/motion/depth/condition/green_boy_flair_4s.mp4" autoplay muted loop></video>
+            </div>
+            <div class="video-overlay-wrapper">
+              <video class="main-video" src="static/videos/baseline/motion/depth/girl_yawn_resized_fps16_4s.mp4" autoplay muted loop></video>
+              <video class="overlay-video" src="static/videos/baseline/motion/depth/condition/girl_yawn_4s.mp4" autoplay muted loop></video>
+            </div>
+            <div class="video-overlay-wrapper">
+              <video class="main-video" src="static/videos/baseline/motion/depth/man_run_resized_fps16_4s.mp4" autoplay muted loop></video>
+              <video class="overlay-video" src="static/videos/baseline/motion/depth/condition/man_run_4s.mp4" autoplay muted loop></video>
+            </div>
+            <div class="video-overlay-wrapper">
+              <video class="main-video" src="static/videos/baseline/motion/depth/purple_robot_walk_resized_fps16_4s.mp4" autoplay muted loop></video>
+              <video class="overlay-video" src="static/videos/baseline/motion/depth/condition/robot_walk_4s.mp4" autoplay muted loop></video>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ours -->
+        <div class="video-comparison-row">
+          <div class="video-comparison-label">Ours</div>
+          <div class="video-comparison-block">
+            <video src="static/videos/baseline/motion/ours/green_boy_flair_resized_fps16_4s.mp4" autoplay muted loop></video>
+            <video src="static/videos/baseline/motion/ours/girl_yawn_fixed_resized_fps16_4s.mp4" autoplay muted loop></video>
+            <video src="static/videos/baseline/motion/ours/man_walk_fixed_resized_fps16_4s.mp4" autoplay muted loop></video>
+            <video src="static/videos/baseline/motion/ours/purple_robot_walk_fixed_resized_fps16_4s.mp4" autoplay muted loop></video>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Comparisons with DreamVideo (ID+Motion) -->
+    <section class="section">
+      <div class="container is-max-desktop">
+
+        <!-- Story description -->
+        <div class="content has-text-justified mb-5">
+          <h2 class="title is-4">Comparisons with DreamVideo (ID+Motion)</h2>
+          <p>
+            A robot is walking through a corridor in a futuristic spaceship.
+          </p>
+        </div>
+
+        <!-- Videos in a row -->
+        <div class="columns is-multiline is-centered">
+
+          <div class="column is-one-third has-text-centered">
+            <video controls autoplay muted loop style="width: 100%; height: auto; border: 2px solid black;">
+              <source src="static/videos/baseline/id_motion/train_4s.mp4" type="video/mp4">
+            </video>
+            <p class="mt-2"><strong>Train Data</strong></p>
+          </div>
+
+          <div class="column is-one-third has-text-centered">
+            <video controls autoplay muted loop style="width: 100%; height: auto; border: 2px solid black;">
+              <source src="static/videos/baseline/id_motion/dreamvideo_4s.mp4" type="video/mp4">
+            </video>
+            <p class="mt-2"><strong>DreamVideo (CVPR 24)</strong></p>
+          </div>
+
+          <div class="column is-one-third has-text-centered">
+            <video controls autoplay muted loop style="width: 100%; height: auto;">
+              <source src="static/videos/baseline/id_motion/ours_4s.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p class="mt-2"><strong>Ours</strong></p>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- Ours -->
-    <div class="video-comparison-row">
-      <div class="video-comparison-label">Ours</div>
-      <div class="video-comparison-block">
-        <video src="static/videos/baseline/motion/ours/green_boy_flair_resized_fps16_4s.mp4" autoplay muted loop></video>
-        <video src="static/videos/baseline/motion/ours/girl_yawn_fixed_resized_fps16_4s.mp4" autoplay muted loop></video>
-        <video src="static/videos/baseline/motion/ours/man_walk_fixed_resized_fps16_4s.mp4" autoplay muted loop></video>
-        <video src="static/videos/baseline/motion/ours/purple_robot_walk_fixed_resized_fps16_4s.mp4" autoplay muted loop></video>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- Comparisons with DreamVideo (ID+Motion) -->
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <!-- Story description -->
-    <div class="content has-text-justified mb-5">
-      <h2 class="title is-4">Comparisons with DreamVideo (ID+Motion)</h2>
-      <p>
-        A robot is walking through a corridor in a futuristic spaceship.
-      </p>
-    </div>
-
-    <!-- Videos in a row -->
-    <div class="columns is-multiline is-centered">
-
-      <div class="column is-one-third has-text-centered">
-        <video controls autoplay muted loop style="width: 100%; height: auto; border: 2px solid black;">
-          <source src="static/videos/baseline/id_motion/train_4s.mp4" type="video/mp4">
-        </video>
-        <p class="mt-2"><strong>Train Data</strong></p>
-      </div>
-
-      <div class="column is-one-third has-text-centered">
-        <video controls autoplay muted loop style="width: 100%; height: auto; border: 2px solid black;">
-          <source src="static/videos/baseline/id_motion/dreamvideo_4s.mp4" type="video/mp4">
-        </video>
-        <p class="mt-2"><strong>DreamVideo (CVPR 24)</strong></p>
-      </div>
-
-      <div class="column is-one-third has-text-centered">
-        <video controls autoplay muted loop style="width: 100%; height: auto;">
-          <source src="static/videos/baseline/id_motion/ours_4s.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <p class="mt-2"><strong>Ours</strong></p>
-      </div>
-    </div>
+    </section>
   </div>
 </section>
 <!-- End Comparisons to Prior Works-->
@@ -624,12 +557,5 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
     </div>
   </div>
 </footer>
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
   </body>
   </html>
