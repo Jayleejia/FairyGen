@@ -1,3 +1,4 @@
+Hi~
 ## 🧸 YAAPPT: Yet Another Academic Project Page Template
 This is an academic paper project page template, modified from [my homepage](http://vinthony.github.io/) and [this project](https://github.com/eliahuhorwitz/Academic-project-page-template).
 
