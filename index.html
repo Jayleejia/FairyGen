@@ -508,7 +508,7 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
     <div class="content has-text-justified mb-5">
       <h2 class="title is-5">(iv)&nbsp Comparisons with DreamVideo (ID+Motion)</h2>
       <p>
-        A robot is walking through a corridor in a futuristic spaceship.
+        prompt: A robot is walking through a corridor in a futuristic spaceship.
       </p>
     </div>
 
@@ -549,7 +549,7 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
 </section>
 
 <!-- Style Customization -->
-<style>
+ <style>
   .style-table {
     display: table;
     width: 100%;
@@ -605,6 +605,73 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
         <div class="style-cell"><img src="static/images/style_ablation/man/dora.png" alt="dora2"></div>
         <div class="style-cell"><img src="static/images/style_ablation/man/pa.png" alt="pa2"></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Two-stage Motion Adapter -->
+<section class="section">
+  <div class="container is-max-desktop">
+    
+    <!-- Section title -->
+    <h2 class="title is-4 has-text-centered mb-5">(ii)&nbsp Two-stage Motion Adapter</h2>
+
+    <!-- First row of videos -->
+    <div class="columns is-mobile is-centered mb-4">
+      <div class="column is-one-third has-text-centered">
+        <video controls autoplay muted loop style="width: 100%; height: auto;">
+          <source src="static/videos/ablation/two_stage/purple/t.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <video controls autoplay muted loop style="width: 100%; height: auto;">
+          <source src="static/videos/ablation/two_stage/purple/n.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <video controls autoplay muted loop style="width: 100%; height: auto;">
+          <source src="static/videos/ablation/two_stage/purple/y.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- Second row of videos -->
+    <div class="columns is-mobile is-centered">
+      <div class="column is-one-third has-text-centered">
+        <video controls autoplay muted loop style="width: 100%; height: auto; ">
+          <source src="static/videos/ablation/two_stage/robot/t.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <video controls autoplay muted loop style="width: 100%; height: auto">
+          <source src="static/videos/ablation/two_stage/robot/n.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="column is-one-third has-text-centered">
+        <video controls autoplay muted loop style="width: 100%; height: auto">
+          <source src="static/videos/ablation/two_stage/robot/y.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <!-- Header row text -->
+    <div class="columns is-mobile has-text-centered mb-4">
+      <div class="column"><strong>Train Video</strong></div>
+      <div class="column"><strong>LoRA Directly</strong></div>
+      <div class="column"><strong>w/ Two Stage Motion Adapter</strong></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Tinestep Shift Strategy -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-5 has-text-centered">(iii)&nbsp Timestep Shift Strategy</h2>
+    <div class="has-text-centered">
+      <video autoplay controls muted loop style="max-width: 100%; height: auto;">
+        <source src="static/videos/ablation/timestep_shift.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
   </div>
 </section>
