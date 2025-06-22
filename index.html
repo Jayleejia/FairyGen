@@ -227,9 +227,8 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
 <section class="section hero is-light">
   <div class="hero-body">
     <div class="container is-max-desktop">
-      <h2 class="title is-3">Method Overview</h2>
+      <h2 class="title is-2">Method</h2>
       <div class="has-text-centered">
-        <!-- <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/> -->
         <img src="static/images/pipeline.png" alt="Method Overview" width="100%">
       </div>
     </div>
@@ -240,7 +239,7 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
 <!-- Comparisons to Prior Works -->
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Comparisons to Prior Works</h2>
+    <h2 class="title is-2 has-text-centered">Comparisons to Prior Works</h2>
   </div>
 </section>
 <!-- Multi-event Baseline -->
@@ -408,7 +407,7 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
     width: 100%;
     height: auto;
     display: block;
-    border: 2px solid black;
+    border: 2px solid rgb(111, 111, 111);
   }
 
   .video-overlay-wrapper video.overlay-video {
@@ -417,10 +416,10 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
     left: 0;
     width: 60px;
     height: auto;
-    border: 2px solid black;
+    border: 2px solid rgb(111, 111, 111);
     z-index: 10;
     pointer-events: none;
-    box-shadow: 0 0 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0px rgb(111, 111, 111);
   }
 </style>
 
@@ -541,6 +540,74 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
   </div>
 </section>
 <!-- End Comparisons to Prior Works-->
+
+<!-- Ablation -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-2 has-text-centered">Ablation</h2>
+  </div>
+</section>
+
+<!-- Style Customization -->
+<style>
+  .style-table {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 2rem;
+  }
+  .style-row {
+    display: table-row;
+  }
+  .style-cell {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.25rem 0;
+  }
+  .style-cell img {
+    width: 180px;
+    height: auto;
+    border: 2px solid #ccc;
+  }
+  .style-header {
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding-bottom: 0.5rem;
+  }
+</style>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-5 has-text-centered">(i)&nbsp Style Customization Methods</h2>
+
+    <!-- Title Row -->
+    <div class="style-table">
+      <div class="style-row">
+        <div class="style-cell style-header">Input Image</div>
+        <div class="style-cell style-header">LoRA</div>
+        <div class="style-cell style-header">DoRA</div>
+        <div class="style-cell style-header">PA (Ours)</div>
+      </div>
+
+      <!-- First Example Row -->
+      <div class="style-row">
+        <div class="style-cell"><img src="static/images/style_ablation/pig/pig.jpg" alt="input1"></div>
+        <div class="style-cell"><img src="static/images/style_ablation/pig/lora.png" alt="lora1"></div>
+        <div class="style-cell"><img src="static/images/style_ablation/pig/dora.png" alt="dora1"></div>
+        <div class="style-cell"><img src="static/images/style_ablation/pig/pa.png" alt="pa1"></div>
+      </div>
+
+      <!-- Second Example Row -->
+      <div class="style-row">
+        <div class="style-cell"><img src="static/images/style_ablation/man/man.jpg" alt="input2"></div>
+        <div class="style-cell"><img src="static/images/style_ablation/man/lora.png" alt="lora2"></div>
+        <div class="style-cell"><img src="static/images/style_ablation/man/dora.png" alt="dora2"></div>
+        <div class="style-cell"><img src="static/images/style_ablation/man/pa.png" alt="pa2"></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!--BibTex citation -->
