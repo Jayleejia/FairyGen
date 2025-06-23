@@ -89,20 +89,6 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
-                    <!--
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link ">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-                    -->
-
-
                   <!-- Github link -->
                   <span class="link-block">
                     <a href="https://github.com/GVCLab/FairyGen" target="_blank"
@@ -176,8 +162,8 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
     <div class="container is-max-desktop">
       <div id="results-carousel" class="carousel results-carousel">
 
-        <div class="item">
-          <video controls width="100%" autoplay muted loop>
+        <div class="item has-text-centered">
+          <video controls width="80%" autoplay muted loop style="display: inline-block;"> 
             <source src="static/videos/girl_adventure.mp4" type="video/mp4">
           </video>
           <h2 class="subtitle has-text-centered">
@@ -185,8 +171,8 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
           </h2>
         </div>
 
-        <div class="item">
-          <video controls width="100%" autoplay muted loop>
+        <div class="item has-text-centered">
+          <video controls width="80%" autoplay muted loop>
             <source src="static/videos/man_adventure.mp4" type="video/mp4">
           </video>
           <h2 class="subtitle has-text-centered">
@@ -194,8 +180,8 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
           </h2>
         </div>
 
-        <div class="item">
-          <video controls width="100%" autoplay muted loop>
+        <div class="item has-text-centered">
+          <video controls width="80%" autoplay muted loop >
             <source src="static/videos/old_man_beach.mp4" type="video/mp4">
           </video>
           <h2 class="subtitle has-text-centered">
@@ -203,8 +189,8 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
           </h2>
         </div>
 
-        <div class="item">
-          <video controls width="100%" autoplay muted loop>
+        <div class="item has-text-centered">
+          <video controls width="80%" autoplay muted loop>
             <source src="static/videos/robot_adventure.mp4" type="video/mp4">
           </video>
           <h2 class="subtitle has-text-centered">
@@ -562,7 +548,7 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
     padding: 0.25rem 0;
   }
   .style-cell img {
-    width: 180px;
+    width: 222px;
     height: auto;
     border: 2px solid #ccc;
   }
@@ -677,18 +663,14 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
   <div class="container is-max-desktop">
     <h2 class="title is-2 has-text-centered">Limitation</h2>
   </div>
-</section>
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="has-text-centered">
-      <img src="static/images/limitation.png" alt="Dynamic Foreground Motion" style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
-      <p class="subtitle is-6 mt-3">
-        Dynamic foreground motion over a static background due to the inherent unpredictability of the video diffusion model's generative prior.
-      </p>
-    </div>
+
+  <div class="has-text-centered">
+    <p class="subtitle is-6 mt-3">
+      Dynamic foreground motion over a static background due to the video diffusion model's unpredictability.
+    </p>
+    <img src="static/images/limitation.png" alt="Dynamic Foreground Motion" style="max-width: 100%; height: auto;">
   </div>
 </section>
-
 
 
 <!--BibTex citation -->
