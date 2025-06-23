@@ -172,7 +172,7 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
         </div>
 
         <div class="item has-text-centered">
-          <video controls width="80%" autoplay muted loop>
+          <video controls width="90%" autoplay muted loop>
             <source src="static/videos/man_adventure.mp4" type="video/mp4">
           </video>
           <h2 class="subtitle has-text-centered">
@@ -289,65 +289,96 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
 <section class="section">
   <div class="container is-max-desktop">
 
-    <!-- Title -->
-    <h2 class="title is-5 has-text-centered">(ii)&nbsp Comparison with Style Baselines</h2>
+    <h2 class="title is-5 has-text-centered">
+      (ii)&nbsp;Comparison&nbsp;with&nbsp;Style&nbsp;Baselines
+    </h2>
 
-    <!-- Reference Row -->
-    <div class="comparison-row">
-      <div class="comparison-label">Reference</div>
-      <div class="comparison-images">
-        <img src="static/images/style_baseline/ref/robot_resize.jpg" alt="Reference 1"
-            style="border: 2px dashed lightgray; padding: 4px;">
-        <img src="static/images/style_baseline/ref/man_resize.jpg" alt="Reference 2"
-            style="border: 2px dashed lightgray; padding: 4px;">
-        <img src="static/images/style_baseline/ref/green_boy_resize.jpg" alt="Reference 3"
-            style="border: 2px dashed lightgray; padding: 4px;">
-        <img src="static/images/style_baseline/ref/wolf_resize.jpg" alt="Reference 4"
-            style="border: 2px dashed lightgray; padding: 4px;">
+    <!-- ───────────── 方法标签行 ───────────── -->
+    <div class="columns is-mobile has-text-centered has-text-weight-semibold">
+      <div class="column is-one-fifth p-1">Reference</div>
+      <div class="column is-one-fifth">BLoRA</div>
+      <div class="column is-one-fifth">InstantStyle</div>
+      <div class="column is-one-fifth">DreamBooth</div>
+      <div class="column is-one-fifth">Ours</div>
+    </div>
+
+    <!-- ───────────── 样例 1 ───────────── -->
+    <div class="columns is-mobile is-vcentered comparison-row">
+      <div class="column is-one-fifth has-text-centered">
+        <img src="static/images/style_baseline/ref/robot_resize.jpg" alt="Ref 1"
+             style="width:100%;border:2px dashed lightgray;padding:4px;">
+      </div>
+      <div class="column is-one-fifth has-text-centered">
+        <img src="static/images/style_baseline/robot/blora.jpg" alt="BLoRA 1" style="width:100%;">
+      </div>
+      <div class="column is-one-fifth has-text-centered">
+        <img src="static/images/style_baseline/robot/is.png"   alt="InstantStyle 1" style="width:100%;">
+      </div>
+      <div class="column is-one-fifth has-text-centered">
+        <img src="static/images/style_baseline/robot/db.png"   alt="DreamBooth 1" style="width:100%;">
+      </div>
+      <div class="column is-one-fifth has-text-centered">
+        <img src="static/images/style_baseline/robot/ours.png" alt="Ours 1" style="width:100%;">
       </div>
     </div>
 
-    <!-- BLoRA Row -->
-    <div class="comparison-row">
-      <div class="comparison-label">BLoRA</div>
-      <div class="comparison-images">
-        <img src="static/images/style_baseline/robot/blora.jpg" alt="BLoRA 1">
-        <img src="static/images/style_baseline/man/blora.jpg" alt="BLoRA 2">
-        <img src="static/images/style_baseline/green_boy/blora.jpg" alt="BLoRA 3">
-        <img src="static/images/style_baseline/wolf/blora.jpg" alt="BLoRA 4">
+    <!-- ───────────── 样例 2 ───────────── -->
+    <div class="columns is-mobile is-vcentered comparison-row">
+      <div class="column is-one-fifth has-text-centered">
+        <img src="static/images/style_baseline/ref/man_resize.jpg" alt="Ref 2"
+             style="width:100%;border:2px dashed lightgray;padding:4px;">
+      </div>
+      <div class="column is-one-fifth has-text-centered">
+        <img src="static/images/style_baseline/man/blora.jpg" alt="BLoRA 2" style="width:100%;">
+      </div>
+      <div class="column is-one-fifth has-text-centered">
+        <img src="static/images/style_baseline/man/is.png"   alt="InstantStyle 2" style="width:100%;">
+      </div>
+      <div class="column is-one-fifth has-text-centered">
+        <img src="static/images/style_baseline/man/db.png"   alt="DreamBooth 2" style="width:100%;">
+      </div>
+      <div class="column is-one-fifth has-text-centered">
+        <img src="static/images/style_baseline/man/ours.png" alt="Ours 2" style="width:100%;">
       </div>
     </div>
 
-    <!-- InstantStyle Row -->
-    <div class="comparison-row">
-      <div class="comparison-label">InstantStyle</div>
-      <div class="comparison-images">
-        <img src="static/images/style_baseline/robot/is.png" alt="InstantStyle 1">
-        <img src="static/images/style_baseline/man/is.png" alt="InstantStyle 2">
-        <img src="static/images/style_baseline/green_boy/is.png" alt="InstantStyle 3">
-        <img src="static/images/style_baseline/wolf/is.png" alt="InstantStyle 3">
+    <!-- ───────────── 样例 3 ───────────── -->
+    <div class="columns is-mobile is-vcentered comparison-row">
+      <div class="column is-one-fifth has-text-centered">
+        <img src="static/images/style_baseline/ref/green_boy_resize.jpg" alt="Ref 3"
+             style="width:100%;border:2px dashed lightgray;padding:4px;">
+      </div>
+      <div class="column is-one-fifth has-text-centered">
+        <img src="static/images/style_baseline/green_boy/blora.jpg" alt="BLoRA 3" style="width:100%;">
+      </div>
+      <div class="column is-one-fifth has-text-centered">
+        <img src="static/images/style_baseline/green_boy/is.png"   alt="InstantStyle 3" style="width:100%;">
+      </div>
+      <div class="column is-one-fifth has-text-centered">
+        <img src="static/images/style_baseline/green_boy/db.png"   alt="DreamBooth 3" style="width:100%;">
+      </div>
+      <div class="column is-one-fifth has-text-centered">
+        <img src="static/images/style_baseline/green_boy/ours.png" alt="Ours 3" style="width:100%;">
       </div>
     </div>
 
-    <!-- DreamBooth Row -->
-    <div class="comparison-row">
-      <div class="comparison-label">DreamBooth</div>
-      <div class="comparison-images">
-        <img src="static/images/style_baseline/robot/db.png" alt="DreamBooth 1">
-        <img src="static/images/style_baseline/man/db.png" alt="DreamBooth 2">
-        <img src="static/images/style_baseline/green_boy/db.png" alt="DreamBooth 3">
-        <img src="static/images/style_baseline/wolf/db.png" alt="DreamBooth 4">
+    <!-- ───────────── 样例 4 ───────────── -->
+    <div class="columns is-mobile is-vcentered comparison-row">
+      <div class="column is-one-fifth has-text-centered">
+        <img src="static/images/style_baseline/ref/wolf_resize.jpg" alt="Ref 4"
+             style="width:100%;border:2px dashed lightgray;padding:4px;">
       </div>
-    </div>
-
-    <!-- Ours Row -->
-    <div class="comparison-row">
-      <div class="comparison-label">Ours</div>
-      <div class="comparison-images">
-        <img src="static/images/style_baseline/robot/ours.png" alt="Ours 1">
-        <img src="static/images/style_baseline/man/ours.png" alt="Ours 2">
-        <img src="static/images/style_baseline/green_boy/ours.png" alt="Ours 3">
-        <img src="static/images/style_baseline/wolf/ours.png" alt="Ours 4">
+      <div class="column is-one-fifth has-text-centered">
+        <img src="static/images/style_baseline/wolf/blora.jpg" alt="BLoRA 4" style="width:100%;">
+      </div>
+      <div class="column is-one-fifth has-text-centered">
+        <img src="static/images/style_baseline/wolf/is.png"   alt="InstantStyle 4" style="width:100%;">
+      </div>
+      <div class="column is-one-fifth has-text-centered">
+        <img src="static/images/style_baseline/wolf/db.png"   alt="DreamBooth 4" style="width:100%;">
+      </div>
+      <div class="column is-one-fifth has-text-centered">
+        <img src="static/images/style_baseline/wolf/ours.png" alt="Ours 4" style="width:100%;">
       </div>
     </div>
 
@@ -356,131 +387,136 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
 
 <!-- Motion Baseline -->
 <style>
-  .video-comparison-row {
+  /* 每一行 4 个等宽单元，用 flex 布局让视频对齐 */
+  .video-row {
     display: flex;
-    align-items: center;
-    margin-bottom: 1.5rem;
+    gap: 1rem;                 
+    margin-bottom: 1.25rem;
   }
-
-  .video-comparison-label {
-    width: 150px;
-    font-weight: bold;
-    flex-shrink: 0;
+  /* 单元格 */
+  .video-cell {
+    width: 1 1 0;
+    position: relative;        /* 方便放小叠加视频 */
   }
-
-  .video-comparison-block {
-    display: flex;
-    gap: 1rem; 
+  .video-cell video {
+    width: 100%;     
+    height: auto;    
+    border: 2px solid #6f6f6f;
   }
-
-  .video-comparison-block video {
-    width: 180px;
-    height: auto;
-    border: 2px solid rgb(111, 111, 111);
-    display: block;
-  }
-
-  .video-overlay-wrapper {
-    position: relative;
-    width: 180px;
-  }
-
-  .video-overlay-wrapper video.main-video {
-    width: 100%;
-    height: auto;
-    display: block;
-    border: 2px solid rgb(111, 111, 111);
-  }
-
-  .video-overlay-wrapper video.overlay-video {
+  /* 右上角叠加的小视频 */
+  .video-cell video.overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 60px;
-    height: auto;
-    border: 2px solid rgb(111, 111, 111);
-    z-index: 10;
+    border: 2px solid #6f6f6f;
     pointer-events: none;
-    box-shadow: 0 0 0px rgb(111, 111, 111);
+    z-index: 10;
+  }
+  .method-label-row{
+    display:flex;
+    gap:1rem;
+    font-weight:700;
+  }
+  .method-label-row div{
+    flex:1 1 0;
+    text-align:center;
   }
 </style>
 
 <section class="section">
   <div class="container is-max-desktop">
+    <h2 class="title is-5 has-text-centered">
+      (iii)&nbsp;Comparison&nbsp;with&nbsp;Motion&nbsp;Baselines
+    </h2>
 
-    <!-- Title -->
-    <h2 class="title is-5 has-text-centered">(iii)&nbsp Comparison with Motion Baselines</h2>
+    <!-- ───────────── 方法标签行 ───────────── -->
+    <div class="method-label-row">
+      <div>Motion&nbsp;Sequences</div>
+      <div>Animate-X</div>
+      <div>Wan&nbsp;2.1-Depth</div>
+      <div>Ours</div>
+    </div>
 
-    <!-- Motion Sequences -->
-    <div class="video-comparison-row">
-      <div class="video-comparison-label">Motion Sequences</div>
-      <div class="video-comparison-block">
+    <!-- ───────────── 示例 1：green_boy_flair ───────────── -->
+    <div class="video-row">
+      <!-- Motion Sequences -->
+      <div class="video-cell">
         <video src="static/videos/baseline/motion/train/green_boy_flair_resized_fps16_4s.mp4" autoplay muted loop></video>
+      </div>
+      <!-- Animate-X -->
+      <div class="video-cell">
+        <video src="static/videos/baseline/motion/animate-x/green_boy_flair_green_boy_flair_resized_seed_14_rank_01_00_02_768x512_results_1col_resized_fps16_4s.mp4" autoplay muted loop></video>
+        <video class="overlay" src="static/videos/baseline/motion/animate-x/condition/green_boy_flair_4s.mp4" autoplay muted loop></video>
+      </div>
+      <!-- Wan 2.1-Depth -->
+      <div class="video-cell">
+        <video src="static/videos/baseline/motion/depth/green_boy_flair_resized_fps16_4s.mp4" autoplay muted loop></video>
+        <video class="overlay" src="static/videos/baseline/motion/depth/condition/green_boy_flair_4s.mp4" autoplay muted loop></video>
+      </div>
+      <!-- Ours -->
+      <div class="video-cell">
+        <video src="static/videos/baseline/motion/ours/green_boy_flair_resized_fps16_4s.mp4" autoplay muted loop></video>
+      </div>
+    </div>
+
+    <!-- ───────────── 示例 2：girl_yawn ───────────── -->
+    <div class="video-row">
+      <div class="video-cell">
         <video src="static/videos/baseline/motion/train/girl_yawn_resized_fps16_4s.mp4" autoplay muted loop></video>
+      </div>
+      <div class="video-cell">
+        <video src="static/videos/baseline/motion/animate-x/girl_yawn_girl_yawn_resized_seed_14_rank_01_00_00_768x512_results_1col_resized_fps16_4s.mp4" autoplay muted loop></video>
+        <video class="overlay" src="static/videos/baseline/motion/animate-x/condition/girl_yawn_4s.mp4" autoplay muted loop></video>
+      </div>
+      <div class="video-cell">
+        <video src="static/videos/baseline/motion/depth/girl_yawn_resized_fps16_4s.mp4" autoplay muted loop></video>
+        <video class="overlay" src="static/videos/baseline/motion/depth/condition/girl_yawn_4s.mp4" autoplay muted loop></video>
+      </div>
+      <div class="video-cell">
+        <video src="static/videos/baseline/motion/ours/girl_yawn_fixed_resized_fps16_4s.mp4" autoplay muted loop></video>
+      </div>
+    </div>
+
+    <!-- ───────────── 示例 3：man_run ───────────── -->
+    <div class="video-row">
+      <div class="video-cell">
         <video src="static/videos/baseline/motion/train/man_run_fps16_4s.mp4" autoplay muted loop></video>
+      </div>
+      <div class="video-cell">
+        <video src="static/videos/baseline/motion/animate-x/man_run_man_run_resized_seed_14_rank_01_00_00_768x512_results_1col_resized_fps16_4s.mp4" autoplay muted loop></video>
+        <video class="overlay" src="static/videos/baseline/motion/animate-x/condition/man_run_4s.mp4" autoplay muted loop></video>
+      </div>
+      <div class="video-cell">
+        <video src="static/videos/baseline/motion/depth/man_run_resized_fps16_4s.mp4" autoplay muted loop></video>
+        <video class="overlay" src="static/videos/baseline/motion/depth/condition/man_run_4s.mp4" autoplay muted loop></video>
+      </div>
+      <div class="video-cell">
+        <video src="static/videos/baseline/motion/ours/man_walk_fixed_resized_fps16_4s.mp4" autoplay muted loop></video>
+      </div>
+    </div>
+
+    <!-- ───────────── 示例 4：purple_robot_walk ───────────── -->
+    <div class="video-row">
+      <div class="video-cell">
         <video src="static/videos/baseline/motion/train/purple_robot_walk_resized_fps16_4s.mp4" autoplay muted loop></video>
       </div>
-    </div>
-
-    <!-- Animate-X -->
-    <div class="video-comparison-row">
-      <div class="video-comparison-label">Animate-X</div>
-      <div class="video-comparison-block">
-        <div class="video-overlay-wrapper">
-          <video class="main-video" src="static/videos/baseline/motion/animate-x/green_boy_flair_green_boy_flair_resized_seed_14_rank_01_00_02_768x512_results_1col_resized_fps16_4s.mp4" autoplay muted loop></video>
-          <video class="overlay-video" src="static/videos/baseline/motion/animate-x/condition/green_boy_flair_4s.mp4" autoplay muted loop></video>
-        </div>
-        <div class="video-overlay-wrapper">
-          <video class="main-video" src="static/videos/baseline/motion/animate-x/girl_yawn_girl_yawn_resized_seed_14_rank_01_00_00_768x512_results_1col_resized_fps16_4s.mp4" autoplay muted loop></video>
-          <video class="overlay-video" src="static/videos/baseline/motion/animate-x/condition/girl_yawn_4s.mp4" autoplay muted loop></video>
-        </div>
-        <div class="video-overlay-wrapper">
-          <video class="main-video" src="static/videos/baseline/motion/animate-x/man_run_man_run_resized_seed_14_rank_01_00_00_768x512_results_1col_resized_fps16_4s.mp4" autoplay muted loop></video>
-          <video class="overlay-video" src="static/videos/baseline/motion/animate-x/condition/man_run_4s.mp4" autoplay muted loop></video>
-        </div>
-        <div class="video-overlay-wrapper">
-          <video class="main-video" src="static/videos/baseline/motion/animate-x/purple_robot_walk_purple_robot_walk_resized_seed_14_rank_01_00_03_768x512_results_1col_resized_fps16_4s.mp4" autoplay muted loop></video>
-          <video class="overlay-video" src="static/videos/baseline/motion/animate-x/condition/robot_walk_4s.mp4" autoplay muted loop></video>
-        </div>
+      <div class="video-cell">
+        <video src="static/videos/baseline/motion/animate-x/purple_robot_walk_purple_robot_walk_resized_seed_14_rank_01_00_03_768x512_results_1col_resized_fps16_4s.mp4" autoplay muted loop></video>
+        <video class="overlay" src="static/videos/baseline/motion/animate-x/condition/robot_walk_4s.mp4" autoplay muted loop></video>
       </div>
-    </div>
-
-    <!-- Wan2.1-Depth -->
-    <div class="video-comparison-row">
-      <div class="video-comparison-label">Wan2.1-Depth</div>
-      <div class="video-comparison-block">
-        <div class="video-overlay-wrapper">
-          <video class="main-video" src="static/videos/baseline/motion/depth/green_boy_flair_resized_fps16_4s.mp4" autoplay muted loop></video>
-          <video class="overlay-video" src="static/videos/baseline/motion/depth/condition/green_boy_flair_4s.mp4" autoplay muted loop></video>
-        </div>
-        <div class="video-overlay-wrapper">
-          <video class="main-video" src="static/videos/baseline/motion/depth/girl_yawn_resized_fps16_4s.mp4" autoplay muted loop></video>
-          <video class="overlay-video" src="static/videos/baseline/motion/depth/condition/girl_yawn_4s.mp4" autoplay muted loop></video>
-        </div>
-        <div class="video-overlay-wrapper">
-          <video class="main-video" src="static/videos/baseline/motion/depth/man_run_resized_fps16_4s.mp4" autoplay muted loop></video>
-          <video class="overlay-video" src="static/videos/baseline/motion/depth/condition/man_run_4s.mp4" autoplay muted loop></video>
-        </div>
-        <div class="video-overlay-wrapper">
-          <video class="main-video" src="static/videos/baseline/motion/depth/purple_robot_walk_resized_fps16_4s.mp4" autoplay muted loop></video>
-          <video class="overlay-video" src="static/videos/baseline/motion/depth/condition/robot_walk_4s.mp4" autoplay muted loop></video>
-        </div>
+      <div class="video-cell">
+        <video src="static/videos/baseline/motion/depth/purple_robot_walk_resized_fps16_4s.mp4" autoplay muted loop></video>
+        <video class="overlay" src="static/videos/baseline/motion/depth/condition/robot_walk_4s.mp4" autoplay muted loop></video>
       </div>
-    </div>
-
-    <!-- Ours -->
-    <div class="video-comparison-row">
-      <div class="video-comparison-label">Ours</div>
-      <div class="video-comparison-block">
-        <video src="static/videos/baseline/motion/ours/green_boy_flair_resized_fps16_4s.mp4" autoplay muted loop></video>
-        <video src="static/videos/baseline/motion/ours/girl_yawn_fixed_resized_fps16_4s.mp4" autoplay muted loop></video>
-        <video src="static/videos/baseline/motion/ours/man_walk_fixed_resized_fps16_4s.mp4" autoplay muted loop></video>
+      <div class="video-cell">
         <video src="static/videos/baseline/motion/ours/purple_robot_walk_fixed_resized_fps16_4s.mp4" autoplay muted loop></video>
       </div>
     </div>
 
   </div>
 </section>
+
 
 <!-- Comparisons with DreamVideo (ID+Motion) -->
 <section class="section">
