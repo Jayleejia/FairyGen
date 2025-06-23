@@ -154,14 +154,15 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Method Overview</h2>
         <div class="content has-text-justified">
           <p>
-            We propose <strong>FairyGen</strong>, an automatic system for generating story-driven cartoon videos from <strong>a single child’s drawing</strong>, while faithfully preserving its unique artistic style. Unlike previous storytelling methods that primarily focus on character consistency and basic motion, FairyGen explicitly <strong>disentangles character modeling from stylized background generation</strong> and incorporates cinematic shot design to support expressive and coherent storytelling.
-Given a single character sketch, we first employ a Multimodal Large Language Model (MLLM) to generate a structured storyboard with shot-level descriptions that specify environment settings, character actions, and camera designs. To ensure visual consistency, we introduce a style propagation adapter that captures the character’s visual style and applies it to the background, faithfully retaining the character’s full visual identity while synthesizing style-consistent scenes. A shot design module further enhances visual diversity and cinematic quality through frame cropping and multi-view synthesis based on the storyboard.
-To animate the story, we reconstruct a 3D proxy of the character to derive physically plausible motion sequences, which are then used to fine-tune an MMDiT-based image-to-video diffusion model. We further propose a two-stage motion customization adapter: the first stage learns appearance features from temporally unordered frames, disentangling identity from motion; the second stage models temporal dynamics using a timestep-shift strategy with frozen identity weights.
-Once trained, FairyGen directly renders diverse and coherent video scenes aligned with the storyboard. Extensive experiments demonstrate that our system produces animations that are stylistically faithful, narratively structured, and rich in smooth, natural motion, highlighting its potential for personalized and engaging story animation.
+            We propose <strong>FairyGen</strong>, a novel framework for generating <strong>animated story videos</strong> from <strong>a single hand-drawn character</strong>, while faithfully preserving its artistic style. It features story planning via MLLM, propagated stylization, 3D-based motion generation, and a two-stage propagated motion adapter.
           </p>
+
+          <div class="has-text-centered">
+            <img src="static/images/pipeline.png" alt="Method Overview" width="100%">
+          </div>
         </div>
       </div>
     </div>
@@ -177,7 +178,7 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
       <div id="results-carousel" class="carousel results-carousel">
 
         <div class="item has-text-centered">
-          <video controls width="80%" autoplay muted loop style="display: inline-block;"> 
+          <video controls width="80%" autoplay muted style="display: inline-block;"> 
             <source src="static/videos/girl_adventure.mp4" type="video/mp4">
           </video>
           <h2 class="subtitle has-text-centered">
@@ -186,7 +187,7 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
         </div>
 
         <div class="item has-text-centered">
-          <video controls width="90%" autoplay muted loop>
+          <video controls width="80%" autoplay muted>
             <source src="static/videos/man_adventure.mp4" type="video/mp4">
           </video>
           <h2 class="subtitle has-text-centered">
@@ -195,7 +196,7 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
         </div>
 
         <div class="item has-text-centered">
-          <video controls width="80%" autoplay muted loop >
+          <video controls width="80%" autoplay muted>
             <source src="static/videos/old_man_beach.mp4" type="video/mp4">
           </video>
           <h2 class="subtitle has-text-centered">
@@ -204,7 +205,7 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
         </div>
 
         <div class="item has-text-centered">
-          <video controls width="80%" autoplay muted loop>
+          <video controls width="80%" autoplay muted>
             <source src="static/videos/robot_adventure.mp4" type="video/mp4">
           </video>
           <h2 class="subtitle has-text-centered">
@@ -217,20 +218,6 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
   </div>
 </section>
 <!-- End video carousel -->
-
-
-<!-- Method Overview -->
-<section class="section hero is-light">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <h2 class="title is-2">Method</h2>
-      <div class="has-text-centered">
-        <img src="static/images/pipeline.png" alt="Method Overview" width="100%">
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Method Overview -->
 
 <!-- Comparisons to Prior Works -->
 <section class="section">
@@ -548,14 +535,14 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
     <div class="columns is-multiline is-centered">
 
       <div class="column is-one-third has-text-centered">
-        <video controls autoplay muted loop style="width: 100%; height: auto; border: 2px solid black;">
+        <video controls autoplay muted loop style="width: 100%; height: auto; border: 2px solid rgb(111, 111, 111);">
           <source src="static/videos/baseline/id_motion/train_4s.mp4" type="video/mp4">
         </video>
         <p class="mt-2"><strong>Train Data</strong></p>
       </div>
 
       <div class="column is-one-third has-text-centered">
-        <video controls autoplay muted loop style="width: 100%; height: auto; border: 2px solid black;">
+        <video controls autoplay muted loop style="width: 100%; height: auto; border: 2px solid rgb(111, 111, 111);">
           <source src="static/videos/baseline/id_motion/dreamvideo_4s.mp4" type="video/mp4">
         </video>
         <p class="mt-2"><strong>DreamVideo (CVPR 24)</strong></p>
@@ -600,7 +587,7 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
   .style-cell img {
     width: 222px;
     height: auto;
-    border: 2px solid #ccc;
+    border: 2px solid rgb(111, 111, 111);
   }
   .style-header {
     font-weight: bold;
@@ -615,12 +602,7 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
 
     <!-- Title Row -->
     <div class="style-table">
-      <div class="style-row">
-        <div class="style-cell style-header">Input Image</div>
-        <div class="style-cell style-header">LoRA</div>
-        <div class="style-cell style-header">DoRA</div>
-        <div class="style-cell style-header">PA (Ours)</div>
-      </div>
+
 
       <!-- First Example Row -->
       <div class="style-row">
@@ -637,6 +619,14 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
         <div class="style-cell"><img src="static/images/style_ablation/man/dora.png" alt="dora2"></div>
         <div class="style-cell"><img src="static/images/style_ablation/man/pa.png" alt="pa2"></div>
       </div>
+
+      <div class="style-row">
+        <div class="style-cell style-header">Input Image</div>
+        <div class="style-cell style-header">LoRA</div>
+        <div class="style-cell style-header">DoRA</div>
+        <div class="style-cell style-header">PA (Ours)</div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -651,7 +641,7 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
     <!-- First row of videos -->
     <div class="columns is-mobile is-centered mb-4">
       <div class="column is-one-third has-text-centered">
-        <video controls autoplay muted loop style="width: 100%; height: auto;">
+        <video controls autoplay muted loop style="width: 100%; height: auto;border: 2px solid rgb(111, 111, 111);">
           <source src="static/videos/ablation/two_stage/purple/t.mp4" type="video/mp4">
         </video>
       </div>
@@ -670,7 +660,7 @@ Once trained, FairyGen directly renders diverse and coherent video scenes aligne
     <!-- Second row of videos -->
     <div class="columns is-mobile is-centered">
       <div class="column is-one-third has-text-centered">
-        <video controls autoplay muted loop style="width: 100%; height: auto; ">
+        <video controls autoplay muted loop style="width: 100%; height: auto; border: 2px solid rgb(111, 111, 111);">
           <source src="static/videos/ablation/two_stage/robot/t.mp4" type="video/mp4">
         </video>
       </div>
