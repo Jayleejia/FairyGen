@@ -452,14 +452,37 @@
       </div>
       <!-- Animate-X -->
       <div class="video-cell">
-        <video src="static/videos/baseline/motion/animate-x/green_boy_flair_green_boy_flair_resized_seed_14_rank_01_00_02_768x512_results_1col_resized_fps16_4s.mp4" autoplay muted loop></video>
-        <video class="overlay" src="static/videos/baseline/motion/animate-x/condition/green_boy_flair_4s.mp4" autoplay muted loop></video>
+        <video src="static/videos/baseline/motion/animate-x/green_boy_flair.mp4" muted loop></video>
+        <video class="overlay" src="static/videos/baseline/motion/animate-x/condition/green_boy_flair_720x540.mp4" muted loop></video>
       </div>
       <!-- Wan 2.1-Depth -->
       <div class="video-cell">
-        <video src="static/videos/baseline/motion/depth/green_boy_flair_resized_fps16_4s.mp4" autoplay muted loop></video>
-        <video class="overlay" src="static/videos/baseline/motion/depth/condition/green_boy_flair_4s.mp4" autoplay muted loop></video>
+        <video id="video1" src="static/videos/baseline/motion/depth/green_boy_flair.mp4" muted preload="auto"></video>
+        <video id="video2" class="overlay" src="static/videos/baseline/motion/depth/condition/green_boy_flair_4s.mp4" muted preload="auto"></video>
       </div>
+    <script>
+      const video1 = document.getElementById('video1');
+      const video2 = document.getElementById('video2');
+
+      let readyCount = 0;
+
+      function checkAndPlay() {
+        readyCount++;
+        if (readyCount === 2) {
+          // 将两个视频时间都重设为 0，保证从头开始
+          video1.currentTime = 0;
+          video2.currentTime = 0;
+
+          // 同时播放
+          video1.play();
+          video2.play();
+        }
+      }
+
+      // 等待两个视频都可以播放
+      video1.addEventListener('canplaythrough', checkAndPlay);
+      video2.addEventListener('canplaythrough', checkAndPlay);
+    </script>
       <!-- Ours -->
       <div class="video-cell">
         <video src="static/videos/baseline/motion/ours/green_boy_flair_resized_fps16_4s.mp4" autoplay muted loop></video>
@@ -472,12 +495,12 @@
         <video src="static/videos/baseline/motion/train/girl_yawn_resized_fps16_4s.mp4" autoplay muted loop></video>
       </div>
       <div class="video-cell">
-        <video src="static/videos/baseline/motion/animate-x/girl_yawn_girl_yawn_resized_seed_14_rank_01_00_00_768x512_results_1col_resized_fps16_4s.mp4" autoplay muted loop></video>
-        <video class="overlay" src="static/videos/baseline/motion/animate-x/condition/girl_yawn_4s.mp4" autoplay muted loop></video>
+        <video id="video3" src="static/videos/baseline/motion/animate-x/girl_yawn.mp4" autoplay muted loop></video>
+        <video id="video4" class="overlay" src="static/videos/baseline/motion/animate-x/condition/girl_yawn_720x540.mp4" autoplay muted loop></video>
       </div>
       <div class="video-cell">
-        <video src="static/videos/baseline/motion/depth/girl_yawn_resized_fps16_4s.mp4" autoplay muted loop></video>
-        <video class="overlay" src="static/videos/baseline/motion/depth/condition/girl_yawn_4s.mp4" autoplay muted loop></video>
+        <video src="static/videos/baseline/motion/depth/girl_yawn.mp4" muted preload="auto"></video>
+        <video class="overlay" src="static/videos/baseline/motion/depth/condition/girl_yawn_4s.mp4" muted preload="auto"></video>
       </div>
       <div class="video-cell">
         <video src="static/videos/baseline/motion/ours/girl_yawn_fixed_resized_fps16_4s.mp4" autoplay muted loop></video>
@@ -490,12 +513,12 @@
         <video src="static/videos/baseline/motion/train/man_run_fps16_4s.mp4" autoplay muted loop></video>
       </div>
       <div class="video-cell">
-        <video src="static/videos/baseline/motion/animate-x/man_run_man_run_resized_seed_14_rank_01_00_00_768x512_results_1col_resized_fps16_4s.mp4" autoplay muted loop></video>
-        <video class="overlay" src="static/videos/baseline/motion/animate-x/condition/man_run_4s.mp4" autoplay muted loop></video>
+        <video src="static/videos/baseline/motion/animate-x/man_run.mp4" autoplay muted loop></video>
+        <video class="overlay" src="static/videos/baseline/motion/animate-x/condition/man_run_720x540.mp4" autoplay muted loop></video>
       </div>
       <div class="video-cell">
-        <video src="static/videos/baseline/motion/depth/man_run_resized_fps16_4s.mp4" autoplay muted loop></video>
-        <video class="overlay" src="static/videos/baseline/motion/depth/condition/man_run_4s.mp4" autoplay muted loop></video>
+        <video src="static/videos/baseline/motion/depth/man_run.mp4" muted preload="auto"></video>
+        <video class="overlay" src="static/videos/baseline/motion/depth/condition/man_run_4s.mp4" muted preload="auto"></video>
       </div>
       <div class="video-cell">
         <video src="static/videos/baseline/motion/ours/man_walk_fixed_resized_fps16_4s.mp4" autoplay muted loop></video>
@@ -508,12 +531,12 @@
         <video src="static/videos/baseline/motion/train/purple_robot_walk_resized_fps16_4s.mp4" autoplay muted loop></video>
       </div>
       <div class="video-cell">
-        <video src="static/videos/baseline/motion/animate-x/purple_robot_walk_purple_robot_walk_resized_seed_14_rank_01_00_03_768x512_results_1col_resized_fps16_4s.mp4" autoplay muted loop></video>
-        <video class="overlay" src="static/videos/baseline/motion/animate-x/condition/robot_walk_4s.mp4" autoplay muted loop></video>
+        <video src="static/videos/baseline/motion/animate-x/robot_walk.mp4" autoplay muted loop></video>
+        <video class="overlay" src="static/videos/baseline/motion/animate-x/condition/robot_walk_720x540.mp4" autoplay muted loop></video>
       </div>
       <div class="video-cell">
-        <video src="static/videos/baseline/motion/depth/purple_robot_walk_resized_fps16_4s.mp4" autoplay muted loop></video>
-        <video class="overlay" src="static/videos/baseline/motion/depth/condition/robot_walk_4s.mp4" autoplay muted loop></video>
+        <video src="static/videos/baseline/motion/depth/robot_walk.mp4" muted preload="auto"></video>
+        <video class="overlay" src="static/videos/baseline/motion/depth/condition/robot_walk_4s.mp4" muted preload="auto"></video>
       </div>
       <div class="video-cell">
         <video src="static/videos/baseline/motion/ours/purple_robot_walk_fixed_resized_fps16_4s.mp4" autoplay muted loop></video>
@@ -745,5 +768,43 @@
     </div>
   </div>
 </footer>
+  <script>
+  /**
+   *  把所有包含 2 段 <video> 的 .video-cell 都找出来做同步
+   *  规则：先等两段都能顺畅播放 (canplaythrough)，
+   *        然后：播放 → 4 s 到点 → 一起回到 0 → 重新播放
+   *  整个过程只在客户端做计时，不依赖视频的真实长度，
+   *  因此只要帧率正常，两段就会永远同起同落。
+   */
+
+  document.querySelectorAll('.video-cell').forEach(cell => {
+    const videos = cell.querySelectorAll('video');
+    if (videos.length !== 2) return;          // 跳过只有 1 段的格子
+
+    const [v1, v2] = videos;
+    [v1, v2].forEach(v => v.removeAttribute('loop'));   // 交给 JS 管
+
+    let ready = 0;
+    const onReady = () => {
+      if (++ready === 2) startSyncedLoop();   // 两段都缓冲完再启动
+    };
+
+    v1.addEventListener('canplaythrough', onReady, { once:true });
+    v2.addEventListener('canplaythrough', onReady, { once:true });
+
+    function startSyncedLoop() {
+      v1.currentTime = v2.currentTime = 0;
+      Promise.all([v1.play(), v2.play()]);    // 同步起跑
+
+      // 用 setTimeout 精确 4 s 触发下一轮
+      setTimeout(() => {
+        // 暂停-归零-再播，保持循环节奏一致
+        v1.pause(); v2.pause();
+        startSyncedLoop();
+      }, 4000);                               // 4000 ms = 4 s
+    }
+  });
+  </script>
+
   </body>
   </html>
